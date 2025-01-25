@@ -25,7 +25,6 @@ const ChatSection = () => {
   
       const rawResult = response.data.query_result;
   
-      // Check if there's a valid result
       if (!rawResult || rawResult === '[]' || rawResult === '{}') {
         throw new Error("No query result returned");
       }

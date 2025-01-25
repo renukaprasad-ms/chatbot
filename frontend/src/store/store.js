@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import historyReducer from "./slices/historySlice";
 import chatReducer from "./slices/chatSlice";
-import { thunk } from "redux-thunk";  // Use named import instead of default
+import { thunk } from "redux-thunk"; 
 
 const store = configureStore({
   reducer: {
@@ -9,7 +9,7 @@ const store = configureStore({
     chat: chatReducer
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(thunk),  // Add thunk as middleware
+    getDefaultMiddleware().concat(thunk),
 });
 
 export default store;
